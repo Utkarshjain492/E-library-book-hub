@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(BG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    margin: 40px;
+    font-size: 30px;
+    text-decoration: underline 3px white;
+    font-style: italic;
+    text-underline-offset: 10px;
+    letter-spacing: 20px;
+    text-align: center;
+    bottom: 20px;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}
+
+hr{
+    position: relative;
+    width: 80%;
+    left: 20px;
+}
+
+.page3 a{
+    display: block;
+    margin-top: 18px;
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.container2{
+    position: relative;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    left: 350px;
+    text-align: center;
+}
+
+.container3{
+    position: relative;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    left: 750px;
+    bottom: 270px;
+    text-align: center;
+}
+
+.book{
+    position: relative;
+    width: 190px;
+    height: 270px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+.univ{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-decoration: underline dashed;
+}
+
+.heading{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.sub-title{
+    position: relative;
+    margin-top: 20px;
+    font-size: 14px;
+    border: 1.5px solid black;
+    border-width: 3px;
+    width: 65%;
+    left: 15%;
+    border-radius: 20px;
+}
+
+.writer p{
+    color: white;
+    margin-top: 2px;
+}
+
+.writer i{
+    color: #000;
+    position: relative;
+    left: 30%;
+    top: 30px;
+}
+
+.front li{
+    background: white;
+    border-radius: 10px;
+}
+
+.back li{
+    background: linear-gradient(45deg, rgb(176, 163, 16), orange, #ffcc00, wheat);
+    border-radius: 10px;
+    width: 97.5% !important;
+}
+
+.back3 li{
+    background: linear-gradient(45deg, rgb(255, 85, 85), rgb(85, 85, 255), rgb(217, 35, 189));
+    border-radius: 10px;
+    width: 97.5% !important;
+}
+
+.page > li,
+.page3 > li{
+    background: -webkit-linear-gradient(left, azure 0%, #e1ddd8 100%);
+    background: linear-gradient(left, azure 0%, #e1ddd8 100%);
+    box-shadow: inset 0px -1px 2px rgba(50,50,50,0.1),
+                inset -1px 0px 1px rgba(150,150,150,0.2);
+
+    border-radius: 0 5px 5px 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: left center;
+}
+
+.front{
+    transform: rotateY(-34deg) translateZ(8px);
+}
+
+.back,
+.back3{
+    transform: rotateY(-15deg) translateZ(-8px);
+}
+
+.page li:nth-child(1),
+.page3 li:nth-child(1){
+    transform: rotateY(-28deg);
+}
+
+.page li:nth-child(2),
+.page3 li:nth-child(2){
+    cursor: default;
+    font-size: 50px;
+    transform: rotateY(-30deg);
+}
+
+.page li:nth-child(3),
+.page3 li:nth-child(3){
+    transform: rotateY(-32deg);
+}
+
+.page li:nth-child(4),
+.page3 li:nth-child(4){
+    transform: rotateY(-34deg);
+}
+
+.page li:nth-child(5),
+.page3 li:nth-child(5){
+    transform: rotateY(-36deg);
+}
+
+.front,
+.back,
+.back3,
+.page,
+.page3,
+.front li,
+.back li,
+.back3 li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back,
+.back3{
+    transform-origin: 0% 100%;
+}
+
+.front{
+    transition: all 0.8s ease, z-index 0.6s;
+}
+
+.front li:last-child{
+    transform: rotateY(180deg) translateZ(2px);
+}
+
+.page,
+.page3,
+.page > li,
+.page3 > li{
+    position: absolute;
+}
+
+.page,
+.page3{
+    width: 100%;
+    height: 98%;
+    top: 1%;
+    left: 3%;
+}
+
+.page li,
+.page3 li{
+    transition-duration: 0.6s;
+}
+
+.book:hover .front{
+    transform: rotateY(-145deg) translateZ(0);
+}
+
+.book:hover > .page li:nth-child(1),
+.book:hover > .page3 li:nth-child(1){
+    transform: rotateY(-30deg);
+    transition: 1.5s;
+}
+
+.book:hover > .page li:nth-child(2),
+.book:hover > .page3 li:nth-child(2){
+    transform: rotateY(-35deg);
+    transition: 1.8s;
+}
+
+.book:hover > .page li:nth-child(3),
+.book:hover > .page3 li:nth-child(3){
+    transform: rotateY(-118deg);
+    transition: 1.6s;
+}
+
+.book:hover > .page li:nth-child(4),
+.book:hover > .page3 li:nth-child(4){
+    transform: rotateY(-130deg);
+    transition: 1.4s;
+}
+
+.book:hover > .page li:nth-child(5),
+.book:hover > .page3 li:nth-child(5){
+    transform: rotateY(-140deg);
+    transition: 1.2s;
+}
+
+.frontCover{
+    position: absolute;
+    background: linear-gradient(45deg, rgb(176, 163, 16),orange, #ffcc00, wheat);
+    height: 100%;
+    width: 101%;
+    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.frontCover3{
+    position: absolute;
+    background: linear-gradient(45deg, rgb(255, 85, 85), rgb(85, 85, 255), rgb(217, 35, 189));
+    height: 100%;
+    width: 101%;
+    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

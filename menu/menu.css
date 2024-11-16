@@ -1,0 +1,180 @@
+@font-face {
+    font-family: name;
+    src: url(great-vibes/GreatVibes-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(BG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.container{
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.names{
+    position: relative;
+    font-size: 25px;
+    font-style: italic;
+    left: 20px;
+    top: 20px;
+    font-family: name;
+    font-weight: lighter;
+    letter-spacing: 10px;
+}
+
+.menu{
+    position: fixed;
+    background-color: #262626;
+    height: 70px;
+    width: 80%;
+    top: -100%;
+    align-items: center;
+    left: 12%;
+    border-radius: 15px;
+    transition: top 0.5s ease;
+}
+
+.nav{
+    position: sticky;
+    left: 30px;
+    margin-top: -30px;
+    width: fit-content;
+    border: white;
+    border-radius: 5px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.nav span{
+    display: block;
+    position: relative;
+    background-color: white;
+    width: 35px;
+    height: 4px;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5px;
+    transition: .5s ease;
+}
+
+.nav.clicked span:nth-child(1){
+    transform-origin: left;
+    transform: rotate(30deg);
+}
+
+.nav.clicked span:nth-child(2){
+    transform: scale(0, 1);
+}
+
+.nav.clicked span:nth-child(3){
+    transform-origin: left;
+    transform: rotate(-30deg);
+}
+
+.menu ul{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu ul li{
+    display: inline;
+    position: relative;
+    margin: 60px;
+    top: 15px;
+    z-index: 1;
+    left: -20px;
+}
+
+.menu ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.menu a::after{
+    transform: scale(0, 1);
+    transition: transform .5s ease;
+}
+
+.menu a:hover::after{
+    transform: scale(1, 1);
+}
+
+.menu ul span{
+    position: absolute;
+    left: 5%;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.menu li:nth-child(1):hover ~ span{
+    left: 5%;
+}
+
+.menu li:nth-child(2):hover ~ span{
+    left: 25%;
+}
+
+.menu li:nth-child(3):hover ~ span{
+    left: 43%;
+}
+
+.menu li:nth-child(4):hover ~ span{
+    left: 63%;
+}
+
+.menu li:nth-child(5):hover ~ span{
+    left: 82%;
+}
+
+.nav.clicked ~ .menu{
+    top: 2px;
+    transition: all .5s ease;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+@media screen and (max-width: 360px){
+
+    .names{
+        font-size: 10px;
+        left: 30px;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .nav{
+        left: 10px;
+        margin-top: -30px;
+    }
+
+}
