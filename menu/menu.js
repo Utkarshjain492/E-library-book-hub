@@ -29,3 +29,11 @@ document.getElementById('nav-btn').addEventListener('click', function() {
     }
     updateButtonState();
 });
+
+
+const channel = new BroadcastChannel('page_refresh_channel');
+channel.onmessage = (event) => {
+    if (event.data === 'refresh') {
+        location.reload();
+    }
+};
