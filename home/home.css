@@ -208,10 +208,10 @@ body{
     }
     
     .animatedMenu{
-        transform: translateX(50vh);
+        transform: translateX(53vh);
     }
     
     .animatedList{
-        transform: translateY(-140vh);
+        transform: translateY(-150vh);
     }
 }
