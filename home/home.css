@@ -183,8 +183,8 @@ body{
         display: block;
         position: absolute;
         top: 0;
-        left: -100%;
-        width: 100%;
+        left: -200%;
+        width: 150%;
         height: 100vh;
         background-color: black;
         transition: transform 1s ease;
@@ -208,7 +208,7 @@ body{
     }
     
     .animatedMenu{
-        transform: translateX(52vh);
+        transform: translateX(100vh);
     }
     
     .animatedList{
