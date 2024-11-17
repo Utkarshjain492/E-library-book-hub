@@ -87,3 +87,11 @@ window.addEventListener('storage', function(event){
         updateStatus();
     }
 });
+
+
+const menuBtn = document.getElementById('btn');
+
+const channel = new BroadcastChannel('page_refresh_channel');
+function refreshMenu() {
+    channel.postMessage('refresh');
+}
